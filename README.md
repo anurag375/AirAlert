@@ -1,67 +1,76 @@
 # 🌬️ AQI Explorer - React Native Expo App
 
-A premium, cross-platform React Native utility application that lets users monitor real-time air quality indices (AQI) anywhere in the world. Built entirely with **Expo**, featuring a dynamic Dark/Light theme, haptic feedback, local push notifications, and rich environmental data straight from the Open-Meteo API.
+A premium, cross-platform React Native utility application that lets users monitor real-time air quality indices (AQI) and weather conditions anywhere in the world. Built with **Expo** and enhanced with a **Glassy Neon UI**, featuring haptic feedback, local push notifications, and rich environmental data from the Open-Meteo API.
+
+---
+
+## 📸 Screenshots
+
+| Air Quality (Dark) | Weather (Dark) | Air Quality (Light) | Weather (Light) |
+|:---:|:---:|:---:|:---:|
+| <img src="./img/Dark1.jpeg" width="180"> | <img src="./img/Dark2.jpeg" width="180"> | <img src="./img/light1.jpeg" width="180"> | <img src="./img/light2.jpeg" width="180"> |
 
 ---
 
 ## ✨ Features
 
-- **🌍 Global City Search:** Powered by Open-Meteo's Geocoding API, letting you look up the air quality of almost any location intuitively.
-- **📍 Current Location:** Tap the location button to automatically fetch AQI where you are right now using native GPS permissions (`expo-location`).
-- **🎨 Dynamic Theming:** Comes with beautiful Nature-Light and Midnight-Dark themes. Your preference is automatically persisted locally using `AsyncStorage`.
-- **🚦 Color-Coded Indicators:** The main UI features a large pulsing circle that smoothly shifts from Green (Good) to Purple/Red (Hazardous) so you understand the air quality without reading a number.
-- **📱 Haptics & Notifications:** Uses `expo-haptics` to provide rich physical tactile feedback, and `expo-notifications` to trigger local system banners when a toxic AQI value is read.
-- **📊 Extended Pollutant Breakdown:** Detailed values for Particulate Matter (PM2.5, PM10), Nitrogen Dioxide ($NO_2$), and Carbon Monoxide ($CO$).
-- **🕒 24-Hour Forecast:** Scrollable horizontal timeline displaying predicted air quality for the next full day.
-- **🕒 Search History:** The app automatically saves your last 5 searches locally. Just tap them to instantly reload.
+- **📑 Dual-Tab Navigation:** Seamlessly switch between **Air Quality** and **Detailed Weather** views with a floating glassy tab bar.
+- **✨ Glassy Neon UI:** A modern aesthetic using `expo-blur` for frosted-glass effects and neon glow highlights.
+- **🌤️ Integrated Weather:** Real-time data for Temperature, Feels Like, Humidity, Wind Speed, and Surface Pressure.
+- **🌍 Global City Search:** Powered by Open-Meteo's Geocoding API, letting you look up any location intuitively.
+- **📍 Current Location:** Tap the location button to automatically fetch data where you are right now.
+- **🎨 Dynamic Theming:** 
+  - **Neon Cyberpunk:** Dark mode with glowing cyan and magenta accents.
+  - **Vibrant Pastel:** A clean, glassy light mode with indigo and coral highlights.
+- **📱 Haptics & Notifications:** Tactile feedback on all interactions and local system alerts for hazardous air quality.
+- **📊 Detailed Breakdowns:** PM2.5, PM10, NO₂, and CO levels with explanatory health tips.
+- **🕒 24-Hour Forecast:** Horizontal timeline for AQI predictions.
 
 ---
 
 ## 🛠️ Required Tech Stack
 
-- **React Native / Expo SDK**
+- **React Native / Expo SDK (v54+)**
+- **UI & Animations:**
+  - `expo-blur` (Glassmorphism effects)
+  - `expo-linear-gradient`
+  - `Animated` API (Pulsing indicators)
 - **API:**
-  - [Open-Meteo Air Quality API](https://open-meteo.com/) (European AQI standard)
-  - [Open-Meteo Geocoding API](https://open-meteo.com/)
-- **State & Packages:**
-  - `axios` (API requests)
-  - `@react-native-async-storage/async-storage` (Offline persistence)
+  - [Open-Meteo Air Quality & Weather API](https://open-meteo.com/)
 - **Expo Native Modules:**
   - `expo-location`
   - `expo-notifications`
   - `expo-haptics`
+  - `@react-native-async-storage/async-storage`
 
 ---
 
 ## 🚀 Getting Started
 
 ### 1. Prerequisites
-Make sure you have Node.js installed, and install the **Expo Go** application on your physical iOS or Android device.
+Make sure you have Node.js installed, and install the **Expo Go** application on your device.
 
 ### 2. Installations
-Clone the repository and install the NPM packages:
 ```bash
-# Navigate to the correct folder
-cd aqi-app
+# Clone the repository
+git clone https://github.com/anurag375/AirAlert.git
+cd AirAlert
 
-# Install all dependencies
+# Install dependencies
 npm install
 ```
 
 ### 3. Running the App
-Start the Expo development server:
 ```bash
 npx expo start
 ```
-Once the server starts running, it will generate a QR code in your terminal. 
-- **On Android**: Open the Expo Go app and select "Scan QR code".
-- **On iOS**: Open your device Camera, point it at the QR code, and tap the prompt to open it in Expo Go.
+Scan the QR code with **Expo Go** (Android) or the **Camera App** (iOS).
 
 ---
 
 ## ⚠️ Known Limitations
-- **Background Processes:** This app does not run background tasks; you must open the app or press fetch to trigger the local AQI notification alert.
-- **Remote Push:** Expo Go no longer natively supports *remote* push notifications out-of-the-box in SDK 53+. The app is configured strictly to rely on *local* notifications, ensuring compatibility across all Expo Go testers. 
+- **Background Tasks:** Notifications trigger when the app is active or upon manual fetch; background fetch is not implemented in this version.
+- **Expo Go:** Local notifications are used to ensure maximum compatibility without needing a full development build.
 
 ---
 
