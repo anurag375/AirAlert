@@ -12,19 +12,29 @@ A premium, cross-platform React Native utility application that lets users monit
 
 ---
 
-## ✨ Features
+## ✨ Key Features
 
-- **📑 Dual-Tab Navigation:** Seamlessly switch between **Air Quality** and **Detailed Weather** views with a floating glassy tab bar.
-- **✨ Glassy Neon UI:** A modern aesthetic using `expo-blur` for frosted-glass effects and neon glow highlights.
-- **🌤️ Integrated Weather:** Real-time data for Temperature, Feels Like, Humidity, Wind Speed, and Surface Pressure.
-- **🌍 Global City Search:** Powered by Open-Meteo's Geocoding API, letting you look up any location intuitively.
-- **📍 Current Location:** Tap the location button to automatically fetch data where you are right now.
-- **🎨 Dynamic Theming:** 
-  - **Neon Cyberpunk:** Dark mode with glowing cyan and magenta accents.
-  - **Vibrant Pastel:** A clean, glassy light mode with indigo and coral highlights.
-- **📱 Haptics & Notifications:** Tactile feedback on all interactions and local system alerts for hazardous air quality.
-- **📊 Detailed Breakdowns:** PM2.5, PM10, NO₂, and CO levels with explanatory health tips.
-- **🕒 24-Hour Forecast:** Horizontal timeline for AQI predictions.
+### � Next-Gen Glassmorphism UI
+Experience a professional, high-end interface built with `expo-blur`. The app features **frosted glass containers** and **neon glow highlights** that respond to your theme, making it feel like a futuristic dashboard in the palm of your hand.
+
+### 📑 Unified Environmental Dashboard
+Why settle for one? Our **Floating Dual-Tab System** lets you glide between two powerhouse views:
+- **🌬️ Air Quality Hub:** A deep dive into atmospheric health with pulsing visual indicators.
+- **🌤️ Weather Insight:** Real-time metrics including *Feels Like* temp, *Humidity*, *Pressure*, and *Wind Velocity*.
+
+### 🎨 Immersive Themes
+Choose your vibe with our custom-engineered search-persisted themes:
+- **🌃 Neon Cyberpunk:** Deep blacks paired with electric cyan and magenta glows.
+- **🌤️ Vibrant Pastel:** A hyper-clean, professional light mode featuring soft indigo and coral accents.
+
+### 🎯 Precision & Interaction
+- **🌍 Global Intelligence:** Search any city on Earth with instant geocoding and real-time environmental syncing.
+- **� Instant Local Lock:** One-tap GPS synchronization to get the air quality of your immediate surroundings.
+- **📳 Tactile Response:** Integrated `Haptic Feedback` makes every interaction feel physical and responsive.
+- **🚨 Smart Alerts:** Automated local notifications keep you safe when air quality crosses into hazardous territory.
+
+### 📊 Scientific Detail
+Don't just see a number; understand it. Track **PM2.5, PM10, NO₂, and CO** levels with a scrollable **24-Hour Forecast** to plan your day with confidence.
 
 ---
 
